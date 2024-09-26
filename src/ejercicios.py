@@ -71,7 +71,7 @@ def lista_ordenada(lista):
     pass
 
 # Ejercicio 10: Cifrar un texto con el cifrado César
-def cifrado_cesar(texto, desplazamiento):
+def cifrado_cesar(texto:str, desplazamiento:int):
     """
     Recibe un texto y un desplazamiento, y devuelve el texto cifrado usando el cifrado César.
     Incluir el código aquí para cifrar el texto con el cifrado César.
