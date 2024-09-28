@@ -34,9 +34,21 @@ print("El resultado escalar es:", resultado_escalar)
 
 
 # Ejercicio 2: Encontrar el valor máximo en una matriz
+import numpy as np
+
 def maximo_matriz(matriz):
 
-    pass
+    matriz = np.array([[1, 2], [3, 4]])
+
+    numero_max = np.max(matriz)
+
+    print ("el numero max es: ", numero_max)
+    
+    import numpy as np
+
+
+
+
 
 # Ejercicio 3: Verificar si un número es primo
 def es_primo(n):
