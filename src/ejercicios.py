@@ -10,10 +10,33 @@ resultado_escalar = np.sum(matriz_suma)
 
 print("El resultado escalar es:", resultado_escalar)
 
+import numpy as np
+
+matriz1 = np.array([[0, 0]])
+matriz2 = np.array([[0, 0]])
+
+matriz_suma = matriz1 + matriz2
+
+resultado_escalar = np.sum(matriz_suma)
+
+print("El resultado escalar es:", resultado_escalar)
+
+import numpy as np
+
+matriz1 = np.array([[-1, -2]])
+matriz2 = np.array([[-3, -4]])
+
+matriz_suma = matriz1 + matriz2
+
+resultado_escalar = np.sum(matriz_suma)
+
+print("El resultado escalar es:", resultado_escalar)
+
+
 # Ejercicio 2: Encontrar el valor máximo en una matriz
 def maximo_matriz(matriz):
 
-
+    pass
 
 # Ejercicio 3: Verificar si un número es primo
 def es_primo(n):
