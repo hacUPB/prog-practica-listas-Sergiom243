@@ -1,18 +1,19 @@
 # Ejercicio 1: Suma de elementos en una lista de listas
-def suma_matriz(matriz):
-    """
-    Recibe una lista de listas y devuelve la suma de todos sus elementos.
-    Incluir el código aquí para sumar los elementos de la matriz.
-    """
-    pass
+import numpy as np
+
+matriz1 = np.array([[1, 2]])
+matriz2 = np.array([[3, 4]])
+
+matriz_suma = matriz1 + matriz2
+
+resultado_escalar = np.sum(matriz_suma)
+
+print("El resultado escalar es:", resultado_escalar)
 
 # Ejercicio 2: Encontrar el valor máximo en una matriz
 def maximo_matriz(matriz):
-    """
-    Recibe una lista de listas y devuelve el valor máximo.
-    Incluir el código aquí para encontrar el valor máximo en la matriz.
-    """
-    pass
+
+
 
 # Ejercicio 3: Verificar si un número es primo
 def es_primo(n):
