@@ -1,36 +1,37 @@
 # Ejercicio 1: Suma de elementos en una lista de listas
-import numpy as np
+def suma_matriz():
+    import numpy as np
 
-matriz1 = np.array([[1, 2]])
-matriz2 = np.array([[3, 4]])
+    matriz1 = np.array([[1, 2]])
+    matriz2 = np.array([[3, 4]])
 
-matriz_suma = matriz1 + matriz2
+    matriz_suma = matriz1 + matriz2
 
-resultado_escalar = np.sum(matriz_suma)
+    resultado_escalar = np.sum(matriz_suma)
 
-print("El resultado escalar es:", resultado_escalar)
+    print("El resultado escalar es:", resultado_escalar)
 
-import numpy as np
+    import numpy as np
 
-matriz1 = np.array([[0, 0]])
-matriz2 = np.array([[0, 0]])
+    matriz1 = np.array([[0, 0]])
+    matriz2 = np.array([[0, 0]])
 
-matriz_suma = matriz1 + matriz2
+    matriz_suma = matriz1 + matriz2
 
-resultado_escalar = np.sum(matriz_suma)
+    resultado_escalar = np.sum(matriz_suma)
 
-print("El resultado escalar es:", resultado_escalar)
+    print("El resultado escalar es:", resultado_escalar)
 
-import numpy as np
+    import numpy as np
 
-matriz1 = np.array([[-1, -2]])
-matriz2 = np.array([[-3, -4]])
+    matriz1 = np.array([[-1, -2]])
+    matriz2 = np.array([[-3, -4]])
 
-matriz_suma = matriz1 + matriz2
+    matriz_suma = matriz1 + matriz2
 
-resultado_escalar = np.sum(matriz_suma)
+    resultado_escalar = np.sum(matriz_suma)
 
-print("El resultado escalar es:", resultado_escalar)
+    print("El resultado escalar es:", resultado_escalar)
 
 
 # Ejercicio 2: Encontrar el valor máximo en una matriz
@@ -52,27 +53,55 @@ def maximo_matriz(matriz):
 
 # Ejercicio 3: Verificar si un número es primo
 def es_primo(n):
-    """
-    Recibe un número y devuelve True si es primo, False en caso contrario.
-    Incluir el código aquí para determinar si un número es primo.
-    """
-    pass
+    if numero < 2:
+        return False
+    for i in range(2, int(numero**0.5) + 1):
+        if numero % i == 0:
+            return False
+    return True
+
+try:
+    numero = int(input("Ingresa un número: "))
+    
+    if es_primo(numero):
+        print(f"El número {numero} es primo.")
+    else:
+        print(f"El número {numero} no es primo.")
+except ValueError:
+    print("Por favor, ingresa un número entero válido.")
+
 
 # Ejercicio 4: Transponer una matriz
+
+matriz_original = [
+    [1, 2],
+    [3, 4]
+]
+
+print("Matriz original:")
+for fila in matriz_original:
+    print(fila)
+
 def transponer_matriz(matriz):
-    """
-    Recibe una lista de listas y devuelve la matriz transpuesta.
-    Incluir el código aquí para transponer la matriz.
-    """
-    pass
+    transpuesta = [[fila[i] for fila in matriz] for i in range(len(matriz[0]))]
+    return transpuesta
+
+matriz_transpuesta = transponer_matriz(matriz_original)
+
+print("\nMatriz transpuesta:")
+for fila in matriz_transpuesta:
+    print(fila)
+
+lista_numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
 # Ejercicio 5: Filtrar números pares
 def filtrar_pares(lista):
-    """
-    Recibe una lista de números y devuelve una nueva lista con solo los números pares.
-    Incluir el código aquí para filtrar los números pares.
-    """
-    pass
+    return [numero for numero in lista if numero % 2 == 0]
+
+numeros_pares = filtrar_pares(lista_numeros)
+
+print("Lista original:", lista_numeros)
+print("Números pares:", numeros_pares)
 
 # Ejercicio 6: Contar la cantidad de palabras en una frase
 def contar_palabras(frase):
