@@ -104,28 +104,41 @@ print("Lista original:", lista_numeros)
 print("Números pares:", numeros_pares)
 
 # Ejercicio 6: Contar la cantidad de palabras en una frase
+frase = "Hola, cómo estás hoy?"
+
 def contar_palabras(frase):
-    """
-    Recibe una frase y devuelve el número de palabras.
-    Incluir el código aquí para contar las palabras en la frase.
-    """
-    pass
+    palabras = frase.split()
+    return len(palabras)
+
+numero_palabras = contar_palabras(frase)
+
+print(f"Frase: '{frase}'")
+print(f"Número de palabras: {numero_palabras}")
+
 
 # Ejercicio 7: Crear una tabla de multiplicar
-def tabla_multiplicar(n):
-    """
-    Recibe un número y devuelve una lista con su tabla de multiplicar del 1 al 10.
-    Incluir el código aquí para generar la tabla de multiplicar.
-    """
-    pass
+def tabla_multiplicar(Número):
+    Número = int(input("Por favor ingrese un número: "))
+
+    for i in range (1, 11):
+        multiplicación = Número * i
+        print(f" {Número} x {i} = {multiplicación}")
+        
+tabla_multiplicar(numero)
+
+
 
 # Ejercicio 8: Contar números negativos en una lista
 def contar_negativos(lista):
-    """
-    Recibe una lista de números y devuelve la cantidad de números negativos.
-    Incluir el código aquí para contar los números negativos en la lista.
-    """
-    pass
+    return len([num for num in lista if num < 0])
+
+lista_numeros = [-1, 0, 1, 2, -3]
+
+numero_negativos = contar_negativos(lista_numeros)
+
+print("Lista:", lista_numeros)
+print(f"Cantidad de números negativos: {numero_negativos}")
+
 
 # Ejercicio 9: Determinar si una lista está ordenada
 def lista_ordenada(lista):
