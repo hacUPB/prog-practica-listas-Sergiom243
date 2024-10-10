@@ -142,25 +142,36 @@ print(f"Cantidad de números negativos: {numero_negativos}")
 
 # Ejercicio 9: Determinar si una lista está ordenada
 def lista_ordenada(lista):
-    """
-    Recibe una lista de números y devuelve True si está ordenada de menor a mayor.
-    Incluir el código aquí para verificar si la lista está ordenada.
-    """
-    pass
+    return lista == sorted(lista)
+
+lista_numeros = [1, 2, 4, 5] 
+
+resultado = lista_ordenada(lista_numeros)
+
+
+print(f"Lista: {lista_numeros}")
+print(f"¿Está ordenada de menor a mayor?: {resultado}")
+
 
 # Ejercicio 10: Cifrar un texto con el cifrado César
-def cifrado_cesar(texto:str, desplazamiento:int):
-    """
-    Recibe un texto y un desplazamiento, y devuelve el texto cifrado usando el cifrado César.
-    Incluir el código aquí para cifrar el texto con el cifrado César.
-    """
-    pass
+def cifrado_cesar(texto, desplazamiento):
+    texto_cifrado = ""
+    for caracter in texto:
+        
+        if caracter.isupper():
+            texto_cifrado += chr((ord(caracter) + desplazamiento - 65) % 26 + 65)
+       
+        elif caracter.islower():
+            texto_cifrado += chr((ord(caracter) + desplazamiento - 97) % 26 + 97)
 
+        else:
+            texto_cifrado += caracter
 
-#Aquí comienza el progrma principal. No modifiques el código debajo de esta línea.
-def main():
-    pass
+    return texto_cifrado
 
+texto = input("Introduce el texto o frase a cifrar: ")
+desplazamiento = int(input("Introduce el desplazamiento: "))
 
-if __name__ == "__main__":
-    main()
+texto_cifrado = cifrado_cesar(texto, desplazamiento)
+
+print(f"Texto cifrado: {texto_cifrado}")
